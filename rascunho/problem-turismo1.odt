@@ -1,0 +1,20 @@
+(define (problem turismo-multimodal-a-1)
+  (:domain turismo-multimodal-a)
+  (:objects estacao-1 estacao-2 estacao-3
+	    estacao-4 estacao-5 estacao-6
+	    the-gold ciclista )
+  (:init 
+  	 (adjacente estacao-1 estacao-2) (adjacente estacao-2 estacao-1)
+	 (adjacente estacao-2 estacao-3) (adjacente estacao-3 estacao-2)
+	 (adjacente estacao-3 estacao-4) (adjacente estacao-4 estacao-3)
+	 (adjacente estacao-4 estacao-5) (adjacente estacao-5 estacao-4)
+	 (adjacente estacao-5 estacao-6) (adjacente estacao-6 estacao-5)
+	 (adjacente estacao-6 estacao-1) (adjacente estacao-1 estacao-6)
+	 (adjacente estacao-6 estacao-4) (adjacente estacao-4 estacao-6)
+	 (bike estacao-2)
+	 (is-gold the-gold)
+	 (at the-gold estacao-5)
+	 (is-ciclista ciclista)
+	 (at ciclista estacao-1))
+  (:goal (and (have ciclista the-gold) (at ciclista estacao-1)))
+  )

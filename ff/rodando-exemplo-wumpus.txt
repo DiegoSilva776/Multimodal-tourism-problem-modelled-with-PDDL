@@ -1,0 +1,2 @@
+use:
+ff -o domain.pddl -f problem.pddl
